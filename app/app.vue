@@ -35,7 +35,7 @@ onMounted(() => {
       <p>PRIVATE PREVIEW</p>
       <h1>A little moment<br><em>behind the curtain.</em></h1>
       <p>This Ourlo preview is shared with invited viewers.</p>
-      <button type="button" @click="requestAccess">Enter passcode <span aria-hidden="true">↗</span></button>
+      <button type="button" @click="requestAccess">Enter passcode <span aria-hidden="true">↗︎</span></button>
     </div>
   </main>
 </template>

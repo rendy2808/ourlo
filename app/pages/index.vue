@@ -23,10 +23,10 @@ const faqs = [
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="#how-it-works">How it works</a><a href="#your-kind-of-moment">For your moments</a><a href="#questions">A few questions</a>
       </nav>
-      <NuxtLink class="button button-small header-cta" to="/demo">Try the guest demo <span aria-hidden="true">↗</span></NuxtLink>
+      <NuxtLink class="button button-small header-cta" to="/demo">Try the guest demo <span aria-hidden="true">↗︎</span></NuxtLink>
       <button class="menu-toggle" :aria-expanded="menuOpen" aria-controls="mobile-nav" @click="menuOpen = !menuOpen">{{ menuOpen ? 'Close' : 'Menu' }}</button>
       <nav v-if="menuOpen" id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
-        <a href="#how-it-works" @click="menuOpen = false">How it works</a><a href="#your-kind-of-moment" @click="menuOpen = false">For your moments</a><a href="#questions" @click="menuOpen = false">A few questions</a><NuxtLink to="/demo" @click="menuOpen = false">Try the guest demo ↗</NuxtLink>
+        <a href="#how-it-works" @click="menuOpen = false">How it works</a><a href="#your-kind-of-moment" @click="menuOpen = false">For your moments</a><a href="#questions" @click="menuOpen = false">A few questions</a><NuxtLink to="/demo" @click="menuOpen = false">Try the guest demo ↗︎</NuxtLink>
       </nav>
     </header>
 
@@ -36,13 +36,13 @@ const faqs = [
           <p class="eyebrow"><span class="mini-flower" aria-hidden="true">✳︎</span> GOOD COMPANY. GREAT KEEPSAKES.</p>
           <h1>The best part?<br>You were <em>there.</em></h1>
           <p class="hero-description">The big day. The little in-between. Turn it all into photo keepsakes, with a photobox that’s already in your pocket.</p>
-          <NuxtLink class="button button-main" to="/demo">Try the guest demo <span aria-hidden="true">↗</span></NuxtLink>
+          <NuxtLink class="button button-main" to="/demo">Try the guest demo <span aria-hidden="true">↗︎</span></NuxtLink>
           <p class="hero-note">Your phone. Your people. No app needed.</p>
         </div>
         <div class="hero-art" aria-label="Photo keepsakes from a wedding and a day on the tennis court">
           <div class="keepsake keepsake-main">
             <img :src="imagePath('wedding-v2.webp')" alt="A bride and male wedding guest caught in a joyful laugh at an evening reception" fetchpriority="high" width="1122" height="1402">
-            <div class="keepsake-caption"><span>one for the memory box.</span><span class="small-heart" aria-hidden="true">♡</span></div>
+            <div class="keepsake-caption"><span>one for the memory box.</span><span class="small-heart" aria-hidden="true">♡︎</span></div>
           </div>
           <div class="hero-strip" aria-hidden="true">
             <img :src="imagePath('tennis-v2.webp')" alt="" width="1448" height="1086"><img :src="imagePath('tennis-v2.webp')" alt="" width="1448" height="1086"><img :src="imagePath('tennis-v2.webp')" alt="" width="1448" height="1086">
@@ -99,7 +99,7 @@ const faqs = [
 
       <section id="questions" class="faq-section section-wrap"><div><p class="eyebrow">THE PRACTICAL BITS</p><h2>A few things<br>you might <em>wonder.</em></h2></div><div class="faq-list"><details v-for="faq in faqs" :key="faq.q"><summary>{{ faq.q }}<span aria-hidden="true">+</span></summary><p>{{ faq.a }}</p></details></div></section>
 
-      <section class="closing"><p class="eyebrow">SOMETHING GOOD IS IN THE MAKING</p><h2>The day goes.<br><em>The feeling stays.</em></h2><p>A photobox for your people.<br>Coming soon to a moment near you.</p><NuxtLink to="/demo" class="button button-yellow">Try the guest demo <span aria-hidden="true">↗</span></NuxtLink><div class="closing-flower" aria-hidden="true">✳︎</div></section>
+      <section class="closing"><p class="eyebrow">SOMETHING GOOD IS IN THE MAKING</p><h2>The day goes.<br><em>The feeling stays.</em></h2><p>A photobox for your people.<br>Coming soon to a moment near you.</p><NuxtLink to="/demo" class="button button-yellow">Try the guest demo <span aria-hidden="true">↗︎</span></NuxtLink><div class="closing-flower" aria-hidden="true">✳︎</div></section>
     </main>
     <footer class="footer section-wrap"><NuxtLink class="wordmark" to="/" aria-label="Ourlo home">ourlo<span class="logo-dot">✳︎</span></NuxtLink><p>This moment is ours.</p><span>© {{ new Date().getFullYear() }} Ourlo</span></footer>
   </div>

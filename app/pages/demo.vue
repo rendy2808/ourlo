@@ -116,7 +116,7 @@ onBeforeUnmount(() => createdObjectUrls.forEach(url => URL.revokeObjectURL(url))
     <header class="demo-site-header">
       <NuxtLink class="demo-wordmark" to="/" aria-label="Back to Ourlo">ourlo<span>✳︎</span></NuxtLink>
       <div class="demo-label"><i></i> Guest-flow prototype</div>
-      <NuxtLink class="back-home" to="/">Back to the story <span aria-hidden="true">↗</span></NuxtLink>
+      <NuxtLink class="back-home" to="/">Back to the story <span aria-hidden="true">↗︎</span></NuxtLink>
     </header>
 
     <main class="demo-main">
@@ -131,13 +131,13 @@ onBeforeUnmount(() => createdObjectUrls.forEach(url => URL.revokeObjectURL(url))
           <div><span>03</span><p><b>Your event, your edit</b>Only approved frames and styles appear.</p></div>
         </div>
 
-        <button class="reset-link" type="button" @click="resetDemo">↺ Reset the demo</button>
+        <button class="reset-link" type="button" @click="resetDemo">↺︎ Reset the demo</button>
       </aside>
 
       <section class="device-area" aria-label="Interactive Ourlo guest demo">
         <div class="demo-card">
           <div class="device-bar">
-            <button v-if="stage > 0 && stage !== 5" class="icon-button" type="button" aria-label="Go back" @click="goBack">←</button>
+            <button v-if="stage > 0 && stage !== 5" class="icon-button" type="button" aria-label="Go back" @click="goBack">←︎</button>
             <span v-else class="icon-space"></span>
             <span class="event-monogram">M <i>&</i> R</span>
             <span class="allowance-pill">{{ remainingOutputs }} left</span>
@@ -161,7 +161,7 @@ onBeforeUnmount(() => createdObjectUrls.forEach(url => URL.revokeObjectURL(url))
                   <div><b>{{ remainingOutputs }}</b><span>keepsakes</span></div>
                   <div><b>{{ remainingAi }}</b><span>AI edits</span></div>
                 </div>
-                <button class="primary-action" type="button" @click="stage = 1">Start making <span>↗</span></button>
+                <button class="primary-action" type="button" @click="stage = 1">Start making <span>↗︎</span></button>
                 <small>Demo pass · no sign-in needed</small>
               </div>
 
@@ -173,10 +173,10 @@ onBeforeUnmount(() => createdObjectUrls.forEach(url => URL.revokeObjectURL(url))
                   <button v-for="layout in layouts" :key="layout.id" type="button" :aria-pressed="selectedLayout === layout.id" :class="['demo-layout-card', { selected: selectedLayout === layout.id }]" @click="chooseLayout(layout.id)">
                     <span class="demo-layout-preview" :class="layout.id"><i v-for="n in layout.shots" :key="n"></i></span>
                     <span><b>{{ layout.name }}</b><small>{{ layout.note }} · {{ layout.shots }} {{ layout.shots === 1 ? 'photo' : 'photos' }}</small></span>
-                    <em aria-hidden="true">{{ selectedLayout === layout.id ? '✓' : '○' }}</em>
+                    <em aria-hidden="true">{{ selectedLayout === layout.id ? '✓︎' : '○︎' }}</em>
                   </button>
                 </div>
-                <button class="primary-action" type="button" @click="stage = 2">Choose photos <span>↗</span></button>
+                <button class="primary-action" type="button" @click="stage = 2">Choose photos <span>↗︎</span></button>
               </div>
 
               <div v-else-if="stage === 2" key="photos" class="flow-screen photo-screen">
@@ -195,7 +195,7 @@ onBeforeUnmount(() => createdObjectUrls.forEach(url => URL.revokeObjectURL(url))
                   </div>
                 </div>
                 <button v-if="!canContinuePhotos" class="sample-fill" type="button" @click="fillWithSamples">Fill all with demo photos</button>
-                <button class="primary-action" type="button" :disabled="!canContinuePhotos" @click="stage = 3">Style the photos <span>↗</span></button>
+                <button class="primary-action" type="button" :disabled="!canContinuePhotos" @click="stage = 3">Style the photos <span>↗︎</span></button>
                 <small>{{ filledCount }} of {{ currentLayout.shots }} added</small>
               </div>
 
@@ -213,7 +213,7 @@ onBeforeUnmount(() => createdObjectUrls.forEach(url => URL.revokeObjectURL(url))
                   </button>
                 </div>
                 <p v-if="currentStyle.cost" class="ai-note">✳︎ AI look simulated for this prototype · {{ remainingAi }} credits available</p>
-                <button class="primary-action" type="button" @click="stage = 4">See the keepsake <span>↗</span></button>
+                <button class="primary-action" type="button" @click="stage = 4">See the keepsake <span>↗︎</span></button>
               </div>
 
               <div v-else-if="stage === 4" key="preview" class="flow-screen preview-screen">
@@ -251,8 +251,8 @@ onBeforeUnmount(() => createdObjectUrls.forEach(url => URL.revokeObjectURL(url))
                   <div class="result-caption"><span>MAYA & RAFI · 14.02.27</span><b>ourlo</b></div>
                 </div>
                 <div class="result-actions">
-                  <a class="primary-action" :href="previewPhotos[0]" download="ourlo-demo-photo.webp">Save sample <span>↓</span></a>
-                  <button class="share-action" type="button" @click="shareResult">Share <span>↗</span></button>
+                  <a class="primary-action" :href="previewPhotos[0]" download="ourlo-demo-photo.webp">Save sample <span>↓︎</span></a>
+                  <button class="share-action" type="button" @click="shareResult">Share <span>↗︎</span></button>
                 </div>
                 <p v-if="resultMessage" class="result-message" aria-live="polite">{{ resultMessage }}</p>
                 <button class="quiet-action" type="button" @click="makeAnother">Make another · {{ remainingOutputs }} left</button>

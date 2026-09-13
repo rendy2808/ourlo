@@ -11,6 +11,6 @@ html{font-variant-emoji:text}
 .steps p,details p{font-size:1rem}
 .layout-options button,.style-options button,.desktop-nav{font-size:.875rem}
 .eyebrow,.hero .eyebrow,legend,.preview-note,.hero-note,.stage-caption,.image-label,.moment-description p,.footer>span,.closing .eyebrow{font-size:.75rem}
-.stage-caption{max-width:300px}
+.stage-caption{max-width:340px;top:18px;z-index:2;background:#dfbfc5;padding:5px 12px;border-radius:999px;white-space:nowrap}
 .hero-strip>span{display:none}
-@media(max-width:760px){.manifesto-band span:nth-child(3){font-size:.75rem}.manifesto-band span:first-child{font-size:1rem}.manifesto-band{flex-wrap:wrap}.layout-options button{font-size:.875rem}.style-options button{font-size:.875rem}}
+@media(max-width:760px){.manifesto-band span:nth-child(3){font-size:.75rem}.manifesto-band span:first-child{font-size:1rem}.manifesto-band{flex-wrap:wrap}.layout-options button{font-size:.875rem}.style-options button{font-size:.875rem}.stage-caption{top:14px;max-width:calc(100% - 32px);white-space:normal}}
