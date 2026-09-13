@@ -1,6 +1,3 @@
-Failed to create stream fd: Operation not permitted
-Failed to create stream fd: Operation not permitted
-Failed to create stream fd: Operation not permitted
 # Ourlo
 
 Nuxt landing page and guest-flow demo for **Ourlo — This moment is ours.**
