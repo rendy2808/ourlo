@@ -9,6 +9,18 @@ npm install
 npm run dev
 ```
 
+## Local database
+
+Development uses Node's built-in SQLite driver and stores data in `.data/ourlo.sqlite`.
+
+```sh
+npm run db:migrate
+npm run db:seed
+npm run db:status
+```
+
+Set `NUXT_LOCAL_DATABASE_PATH` to use another database file. The database file is ignored by Git.
+
 ## Build
 
 ```sh
