@@ -2,7 +2,7 @@
 
 Both images were created with the built-in image generation tool for this landing page. They depict fictional people and are sample brand imagery, not customer photographs or product-generated results.
 
-## public/images/wedding-v2.png
+## public/images/wedding-v2.webp
 
 Use case: photorealistic-natural
 Asset type: Ourlo landing page photographic asset.
@@ -11,7 +11,7 @@ Style/medium: authentic candid photograph, direct flash, analog film grain and w
 Wardrobe: modest long-sleeve high-neck wedding dress; deep burgundy suit with cream shirt.
 Constraints: preserve the intimate portrait crop and aubergine/cream palette; realistic anatomy; no romantic intimacy, revealing clothing, text, logos or watermark.
 
-## public/images/tennis-v2.png
+## public/images/tennis-v2.webp
 
 Use case: photorealistic-natural
 Asset type: Ourlo landing page photographic asset.

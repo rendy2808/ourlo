@@ -19,7 +19,7 @@ const faqs = [
   <div>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="header">
-      <NuxtLink class="wordmark" to="/" aria-label="Ourlo home">ourlo<span class="logo-dot">✳</span></NuxtLink>
+      <NuxtLink class="wordmark" to="/" aria-label="Ourlo home">ourlo<span class="logo-dot">✳︎</span></NuxtLink>
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="#how-it-works">How it works</a><a href="#your-kind-of-moment">For your moments</a><a href="#questions">A few questions</a>
       </nav>
@@ -33,7 +33,7 @@ const faqs = [
     <main id="main">
       <section class="hero section-wrap">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="mini-flower" aria-hidden="true">✳</span> GOOD COMPANY. GREAT KEEPSAKES.</p>
+          <p class="eyebrow"><span class="mini-flower" aria-hidden="true">✳︎</span> GOOD COMPANY. GREAT KEEPSAKES.</p>
           <h1>The best part?<br>You were <em>there.</em></h1>
           <p class="hero-description">The big day. The little in-between. Turn it all into photo keepsakes, with a photobox that’s already in your pocket.</p>
           <NuxtLink class="button button-main" to="/demo">Try the guest demo <span aria-hidden="true">↗</span></NuxtLink>
@@ -41,19 +41,19 @@ const faqs = [
         </div>
         <div class="hero-art" aria-label="Photo keepsakes from a wedding and a day on the tennis court">
           <div class="keepsake keepsake-main">
-            <img :src="imagePath('wedding-v2.png')" alt="A bride and male wedding guest caught in a joyful laugh at an evening reception" fetchpriority="high" width="1122" height="1402">
+            <img :src="imagePath('wedding-v2.webp')" alt="A bride and male wedding guest caught in a joyful laugh at an evening reception" fetchpriority="high" width="1122" height="1402">
             <div class="keepsake-caption"><span>one for the memory box.</span><span class="small-heart" aria-hidden="true">♡</span></div>
           </div>
           <div class="hero-strip" aria-hidden="true">
-            <img :src="imagePath('tennis-v2.png')" alt="" width="1448" height="1086"><img :src="imagePath('tennis-v2.png')" alt="" width="1448" height="1086"><img :src="imagePath('tennis-v2.png')" alt="" width="1448" height="1086">
+            <img :src="imagePath('tennis-v2.webp')" alt="" width="1448" height="1086"><img :src="imagePath('tennis-v2.webp')" alt="" width="1448" height="1086"><img :src="imagePath('tennis-v2.webp')" alt="" width="1448" height="1086">
             <span>MATCH POINT. GOOD PEOPLE.</span><b>ourlo</b>
           </div>
-          <div class="round-note">less posing.<br><em>more living.</em><span aria-hidden="true">✳</span></div>
+          <div class="round-note">less posing.<br><em>more living.</em><span aria-hidden="true">✳︎</span></div>
           <span class="handwritten hero-scribble">a little piece of being there</span>
         </div>
       </section>
 
-      <div class="manifesto-band"><span>Made for the “one more photo” people.</span><span aria-hidden="true">✳</span><span>THIS MOMENT IS OURS.</span><span aria-hidden="true">✳</span><span>A good time, worth keeping.</span></div>
+      <div class="manifesto-band"><span>Made for the “one more photo” people.</span><span aria-hidden="true">✳︎</span><span>THIS MOMENT IS OURS.</span><span aria-hidden="true">✳︎</span><span>A good time, worth keeping.</span></div>
 
       <section id="how-it-works" class="how-section section-wrap">
         <div class="section-heading"><p class="eyebrow">01 / THE LITTLE RITUAL</p><h2>Be in the moment.<br>Take a little <em>with you.</em></h2></div>
@@ -70,9 +70,9 @@ const faqs = [
             <span class="stage-caption">A SMALL PREVIEW OF YOUR NEXT KEEPSAKE</span>
             <div class="sample-frame" :class="[selectedLayout, selectedStyle]" aria-label="Photo layout preview">
               <div class="sample-photos">
-                <img :src="imagePath('wedding-v2.png')" alt="Wedding keepsake preview" width="1122" height="1402" loading="lazy">
-                <img v-if="selectedLayout === 'strip'" :src="imagePath('wedding-v2.png')" alt="A second crop of the wedding sample" width="1122" height="1402" loading="lazy">
-                <img v-if="selectedLayout === 'strip'" :src="imagePath('wedding-v2.png')" alt="A third crop of the wedding sample" width="1122" height="1402" loading="lazy">
+                <img :src="imagePath('wedding-v2.webp')" alt="Wedding keepsake preview" width="1122" height="1402" loading="lazy">
+                <img v-if="selectedLayout === 'strip'" :src="imagePath('wedding-v2.webp')" alt="A second crop of the wedding sample" width="1122" height="1402" loading="lazy">
+                <img v-if="selectedLayout === 'strip'" :src="imagePath('wedding-v2.webp')" alt="A third crop of the wedding sample" width="1122" height="1402" loading="lazy">
               </div>
               <div class="sample-caption"><span>the people make the party.</span><b>ourlo</b></div>
             </div>
@@ -92,15 +92,15 @@ const faqs = [
       <section id="your-kind-of-moment" class="moments section-wrap">
         <div class="moments-heading"><div><p class="eyebrow">03 / WHEREVER YOUR PEOPLE ARE</p><h2>Big feelings.<br><em>Any occasion.</em></h2></div><p>From “I do” to “your serve.”<br>If it brings you together, it belongs here.</p></div>
         <div class="moment-grid">
-          <article class="moment-card wedding-card"><div class="moment-image"><img :src="imagePath('wedding-v2.png')" alt="A bride and male guest sharing laughter at an outdoor wedding celebration" width="1122" height="1402" loading="lazy"><span class="image-label">THE BIG YES</span></div><div class="moment-description"><h3>For the love of it.</h3><p>Weddings, engagements & happy tears.</p></div></article>
-          <article class="moment-card tennis-card"><div class="moment-image"><img :src="imagePath('tennis-v2.png')" alt="A woman and man enjoying a laugh together beside the tennis court" width="1448" height="1086" loading="lazy"><span class="image-label">THE GOOD GAME</span></div><div class="moment-description"><h3>For the fun of it.</h3><p>Match days, team days & just-because days.</p></div></article>
+          <article class="moment-card wedding-card"><div class="moment-image"><img :src="imagePath('wedding-v2.webp')" alt="A bride and male guest sharing laughter at an outdoor wedding celebration" width="1122" height="1402" loading="lazy"><span class="image-label">THE BIG YES</span></div><div class="moment-description"><h3>For the love of it.</h3><p>Weddings, engagements & happy tears.</p></div></article>
+          <article class="moment-card tennis-card"><div class="moment-image"><img :src="imagePath('tennis-v2.webp')" alt="A woman and man enjoying a laugh together beside the tennis court" width="1448" height="1086" loading="lazy"><span class="image-label">THE GOOD GAME</span></div><div class="moment-description"><h3>For the fun of it.</h3><p>Match days, team days & just-because days.</p></div></article>
         </div>
       </section>
 
       <section id="questions" class="faq-section section-wrap"><div><p class="eyebrow">THE PRACTICAL BITS</p><h2>A few things<br>you might <em>wonder.</em></h2></div><div class="faq-list"><details v-for="faq in faqs" :key="faq.q"><summary>{{ faq.q }}<span aria-hidden="true">+</span></summary><p>{{ faq.a }}</p></details></div></section>
 
-      <section class="closing"><p class="eyebrow">SOMETHING GOOD IS IN THE MAKING</p><h2>The day goes.<br><em>The feeling stays.</em></h2><p>A photobox for your people.<br>Coming soon to a moment near you.</p><NuxtLink to="/demo" class="button button-yellow">Try the guest demo <span aria-hidden="true">↗</span></NuxtLink><div class="closing-flower" aria-hidden="true">✳</div></section>
+      <section class="closing"><p class="eyebrow">SOMETHING GOOD IS IN THE MAKING</p><h2>The day goes.<br><em>The feeling stays.</em></h2><p>A photobox for your people.<br>Coming soon to a moment near you.</p><NuxtLink to="/demo" class="button button-yellow">Try the guest demo <span aria-hidden="true">↗</span></NuxtLink><div class="closing-flower" aria-hidden="true">✳︎</div></section>
     </main>
-    <footer class="footer section-wrap"><NuxtLink class="wordmark" to="/" aria-label="Ourlo home">ourlo<span class="logo-dot">✳</span></NuxtLink><p>This moment is ours.</p><span>© {{ new Date().getFullYear() }} Ourlo</span></footer>
+    <footer class="footer section-wrap"><NuxtLink class="wordmark" to="/" aria-label="Ourlo home">ourlo<span class="logo-dot">✳︎</span></NuxtLink><p>This moment is ours.</p><span>© {{ new Date().getFullYear() }} Ourlo</span></footer>
   </div>
 </template>

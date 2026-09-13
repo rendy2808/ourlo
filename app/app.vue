@@ -31,7 +31,7 @@ onMounted(() => {
   <NuxtPage v-if="accessGranted" />
   <main v-else-if="checked" class="access-screen">
     <div class="access-card">
-      <span class="access-mark" aria-hidden="true">✳</span>
+      <span class="access-mark" aria-hidden="true">✳︎</span>
       <p>PRIVATE PREVIEW</p>
       <h1>A little moment<br><em>behind the curtain.</em></h1>
       <p>This Ourlo preview is shared with invited viewers.</p>

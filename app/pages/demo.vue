@@ -35,7 +35,7 @@ const currentLayout = computed(() => layouts.find(item => item.id === selectedLa
 const currentStyle = computed(() => styles.find(item => item.id === selectedStyle.value)!)
 const filledCount = computed(() => selectedPhotos.value.filter(Boolean).length)
 const canContinuePhotos = computed(() => filledCount.value === currentLayout.value.shots)
-const previewPhotos = computed(() => selectedPhotos.value.length ? selectedPhotos.value : [imagePath('wedding-v2.png')])
+const previewPhotos = computed(() => selectedPhotos.value.length ? selectedPhotos.value : [imagePath('wedding-v2.webp')])
 
 function chooseLayout(id: LayoutId) {
   selectedLayout.value = id
@@ -44,7 +44,7 @@ function chooseLayout(id: LayoutId) {
 }
 
 function useSample(index: number) {
-  const samples = [imagePath('wedding-v2.png'), imagePath('tennis-v2.png'), imagePath('wedding-v2.png')]
+  const samples = [imagePath('wedding-v2.webp'), imagePath('tennis-v2.webp'), imagePath('wedding-v2.webp')]
   selectedPhotos.value[index] = samples[index % samples.length]
   selectedPhotos.value = [...selectedPhotos.value]
 }
@@ -61,7 +61,7 @@ function handleUpload(event: Event, index: number) {
 
 function fillWithSamples() {
   selectedPhotos.value = Array.from({ length: currentLayout.value.shots }, (_, index) =>
-    index === 1 ? imagePath('tennis-v2.png') : imagePath('wedding-v2.png')
+    index === 1 ? imagePath('tennis-v2.webp') : imagePath('wedding-v2.webp')
   )
 }
 
@@ -114,7 +114,7 @@ onBeforeUnmount(() => createdObjectUrls.forEach(url => URL.revokeObjectURL(url))
 <template>
   <div class="demo-page">
     <header class="demo-site-header">
-      <NuxtLink class="demo-wordmark" to="/" aria-label="Back to Ourlo">ourlo<span>✳</span></NuxtLink>
+      <NuxtLink class="demo-wordmark" to="/" aria-label="Back to Ourlo">ourlo<span>✳︎</span></NuxtLink>
       <div class="demo-label"><i></i> Guest-flow prototype</div>
       <NuxtLink class="back-home" to="/">Back to the story <span aria-hidden="true">↗</span></NuxtLink>
     </header>
@@ -151,7 +151,7 @@ onBeforeUnmount(() => createdObjectUrls.forEach(url => URL.revokeObjectURL(url))
             <Transition name="screen" mode="out-in">
               <div v-if="stage === 0" key="welcome" class="welcome-screen">
                 <div class="event-photo">
-                  <img :src="imagePath('wedding-v2.png')" alt="Maya and Rafi's sample wedding event" width="1122" height="1402">
+                  <img :src="imagePath('wedding-v2.webp')" alt="Maya and Rafi's sample wedding event" width="1122" height="1402">
                   <span>YOU’RE INVITED IN</span>
                 </div>
                 <p class="mini-kicker">14 FEB 2027 · BALI</p>
@@ -212,7 +212,7 @@ onBeforeUnmount(() => createdObjectUrls.forEach(url => URL.revokeObjectURL(url))
                     <span></span><b>{{ style.name }}</b><small>{{ style.note }}</small>
                   </button>
                 </div>
-                <p v-if="currentStyle.cost" class="ai-note">✳ AI look simulated for this prototype · {{ remainingAi }} credits available</p>
+                <p v-if="currentStyle.cost" class="ai-note">✳︎ AI look simulated for this prototype · {{ remainingAi }} credits available</p>
                 <button class="primary-action" type="button" @click="stage = 4">See the keepsake <span>↗</span></button>
               </div>
 
@@ -228,12 +228,12 @@ onBeforeUnmount(() => createdObjectUrls.forEach(url => URL.revokeObjectURL(url))
                 <div class="charge-summary">
                   <span>1 keepsake</span><span>{{ currentStyle.cost ? '1 AI credit' : 'No AI credits' }}</span>
                 </div>
-                <button class="primary-action" type="button" @click="createKeepsake">Create keepsake <span>✳</span></button>
+                <button class="primary-action" type="button" @click="createKeepsake">Create keepsake <span>✳︎</span></button>
                 <button class="quiet-action" type="button" @click="stage = 3">Change the style</button>
               </div>
 
               <div v-else-if="stage === 5" key="processing" class="processing-screen" aria-live="polite">
-                <div class="processing-mark"><span>✳</span><i></i></div>
+                <div class="processing-mark"><span>✳︎</span><i></i></div>
                 <p class="step-kicker">MAKING YOUR KEEPSAKE</p>
                 <h2>Hold that<br><i>feeling.</i></h2>
                 <p>Framing the good part…</p>
@@ -251,7 +251,7 @@ onBeforeUnmount(() => createdObjectUrls.forEach(url => URL.revokeObjectURL(url))
                   <div class="result-caption"><span>MAYA & RAFI · 14.02.27</span><b>ourlo</b></div>
                 </div>
                 <div class="result-actions">
-                  <a class="primary-action" :href="previewPhotos[0]" download="ourlo-demo-photo.png">Save sample <span>↓</span></a>
+                  <a class="primary-action" :href="previewPhotos[0]" download="ourlo-demo-photo.webp">Save sample <span>↓</span></a>
                   <button class="share-action" type="button" @click="shareResult">Share <span>↗</span></button>
                 </div>
                 <p v-if="resultMessage" class="result-message" aria-live="polite">{{ resultMessage }}</p>
@@ -260,7 +260,7 @@ onBeforeUnmount(() => createdObjectUrls.forEach(url => URL.revokeObjectURL(url))
             </Transition>
           </div>
         </div>
-        <p class="device-footnote"><span>✳</span> Interactive prototype · AI and cloud uploads are simulated</p>
+        <p class="device-footnote"><span>✳︎</span> Interactive prototype · AI and cloud uploads are simulated</p>
       </section>
     </main>
   </div>
