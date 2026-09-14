@@ -9,4 +9,3 @@ export default defineEventHandler((event) => {
   deleteCookie(event, ADMIN_SESSION_COOKIE, sessionCookieOptions(event, 0))
   return { ok: true }
 })
-Failed to create stream fd: Operation not permitted

@@ -10,5 +10,9 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/svg+xml', href: `${process.env.NUXT_APP_BASE_URL || '/'}favicon.svg` }, { rel: 'preconnect', href: 'https://fonts.googleapis.com' }, { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }, { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap' }]
     }
   },
+  routeRules: {
+    '/admin/**': { prerender: false },
+    '/api/**': { prerender: false }
+  },
   nitro: { prerender: { routes: ['/', '/demo'] } }
 })

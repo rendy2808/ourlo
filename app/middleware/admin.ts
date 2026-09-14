@@ -8,4 +8,3 @@ export default defineNuxtRouteMiddleware(async () => {
     return navigateTo(`${baseURL}admin/login`)
   }
 })
-Failed to create stream fd: Operation not permitted
