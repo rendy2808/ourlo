@@ -14,6 +14,10 @@ export function findEventBySlug(database, slug) {
   return database.prepare('SELECT * FROM events WHERE slug = ? COLLATE NOCASE').get(slug)
 }
 
+export function findEventById(database, id) {
+  return database.prepare('SELECT * FROM events WHERE id = ?').get(id)
+}
+
 export function createEvent(database, input) {
   const event = {
     id: randomUUID(),
@@ -35,4 +39,23 @@ export function createEvent(database, input) {
   )
 
   return findEventBySlug(database, event.slug)
+}
+
+export function updateEvent(database, id, input) {
+  database.prepare(`
+    UPDATE events SET
+      slug = ?, name = ?, event_type = ?, event_date = ?, active_from = ?,
+      active_until = ?, timezone = ?, guest_count = ?, max_photos_per_pass = ?,
+      max_ai_per_pass = ?, status = ?, updated_at = CURRENT_TIMESTAMP
+    WHERE id = ?
+  `).run(
+    input.slug, input.name, input.eventType, input.eventDate, input.activeFrom,
+    input.activeUntil, input.timezone, input.guestCount, input.maxPhotosPerPass,
+    input.maxAiPerPass, input.status, id
+  )
+  return findEventById(database, id)
+}
+
+export function deleteEvent(database, id) {
+  return database.prepare('DELETE FROM events WHERE id = ?').run(id).changes > 0
 }

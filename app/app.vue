@@ -28,7 +28,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <NuxtPage v-if="accessGranted" />
+  <NuxtLayout v-if="accessGranted"><NuxtPage /></NuxtLayout>
   <main v-else-if="checked" class="access-screen">
     <div class="access-card">
       <span class="access-mark" aria-hidden="true">✳︎</span>
